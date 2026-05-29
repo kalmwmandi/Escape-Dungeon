@@ -29,3 +29,38 @@ void tampilkanSemuaRuangan()
         cout << endl;
     }
 }
+
+void tambahRuangan()
+{
+    if (jumlahRuangan >= MAX_RUANGAN)
+    {
+        cout << "Ruangan sudah penuh! Maksimal " << MAX_RUANGAN << " ruangan." << endl;
+        return;
+    }
+    int id = jumlahRuangan;
+    cout << "Nama ruangan baru: ";
+    cin.ignore();
+    getline(cin, namaRuangan[id]);
+    cout << "Item ruangan (0=Kosong, 1=Kunci, 2=Petunjuk, 3=EXIT): ";
+    cin >> itemRuangan[id];
+
+    cout << "Hubungkan ke ruangan mana? (masukkan ID, -1 untuk berhenti)" << endl;
+    int hubung;
+    while (true)
+    {
+        cout << "ID ruangan: ";
+        cin >> hubung;
+        if (hubung == -1) break;
+        if (hubung >= 0 && hubung < jumlahRuangan)
+        {
+            tambahEdge(id, hubung);
+            cout << "Terhubung!" << endl;
+        }
+        else
+        {
+            cout << "ID tidak valid." << endl;
+        }
+    }
+    jumlahRuangan++;
+    cout << "Ruangan berhasil ditambahkan dengan ID " << id << endl;
+}
