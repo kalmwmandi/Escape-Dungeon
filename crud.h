@@ -83,3 +83,44 @@ void editRuangan()
     cin >> itemRuangan[id];
     cout << "Ruangan berhasil diupdate!" << endl;
 }
+
+void tambahKoneksiMenu()
+{
+    tampilkanSemuaRuangan();
+    int a, b;
+    cout << "\nTambah koneksi antara ruangan ID: ";
+    cin >> a;
+    cout << "dan ruangan ID: ";
+    cin >> b;
+    if (a >= 0 && a < jumlahRuangan && b >= 0 && b < jumlahRuangan)
+    {
+        tambahEdge(a, b);
+        cout << "Koneksi berhasil ditambahkan!" << endl;
+    }
+    else
+    {
+        cout << "ID tidak valid!" << endl;
+    }
+}
+
+void hapusEdgeMenu()
+{
+    tampilkanSemuaRuangan();
+    int a, b;
+    cout << "\nHapus koneksi antara ruangan ID: ";
+    cin >> a;
+    cout << "dan ruangan ID: ";
+    cin >> b;
+    if (a >= 0 && a < jumlahRuangan && b >= 0 && b < jumlahRuangan)
+    {
+        hapusEdge(a, b);
+        cout << "Koneksi antara " << namaRuangan[a]
+             << " dan " << namaRuangan[b] << " dihapus!" << endl;
+    }
+    else
+    {
+        cout << "ID tidak valid!" << endl;
+    }
+}
+
+#endif
