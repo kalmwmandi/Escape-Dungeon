@@ -64,3 +64,22 @@ void tambahRuangan()
     jumlahRuangan++;
     cout << "Ruangan berhasil ditambahkan dengan ID " << id << endl;
 }
+
+void editRuangan()
+{
+    tampilkanSemuaRuangan();
+    int id;
+    cout << "\nMasukkan ID ruangan yang akan diedit: ";
+    cin >> id;
+    if (id < 0 || id >= jumlahRuangan)
+    {
+        cout << "ID tidak valid!" << endl;
+        return;
+    }
+    cout << "Nama baru (sekarang: " << namaRuangan[id] << "): ";
+    cin.ignore();
+    getline(cin, namaRuangan[id]);
+    cout << "Item baru (0=Kosong, 1=Kunci, 2=Petunjuk, 3=EXIT): ";
+    cin >> itemRuangan[id];
+    cout << "Ruangan berhasil diupdate!" << endl;
+}
