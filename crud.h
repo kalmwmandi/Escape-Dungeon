@@ -67,6 +67,10 @@ void tambahRuangan()
             continue;
         }
         if (hubung == -1) break;
+        if (hubung == id) {
+            cout << "Tidak dapat menghubungkan ruangan ke dirinya sendiri!" << endl;
+            continue;
+        }
         if (hubung >= 0 && hubung < jumlahRuangan)
         {
             tambahEdge(id, hubung);
@@ -126,7 +130,11 @@ void tambahKoneksiMenu()
     }
     cout << "dan ruangan ID: ";
     while (!(cin >> b)) { cin.clear(); cin.ignore(10000, '\n'); cout << "Input angka: "; }
-    if (a >= 0 && a < jumlahRuangan && b >= 0 && b < jumlahRuangan)
+    if (a == b)
+    {
+        cout << "Tidak dapat menghubungkan ruangan ke dirinya sendiri!" << endl;
+    }
+    else if (a >= 0 && a < jumlahRuangan && b >= 0 && b < jumlahRuangan)
     {
         tambahEdge(a, b);
         cout << "Koneksi berhasil ditambahkan!" << endl;
