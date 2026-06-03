@@ -1,8 +1,8 @@
 #ifndef CRUD_H
 #define CRUD_H
 
-// #include "globals.h"
-// #include "graph.h"
+#include "globals.h"
+#include "graph.h"
 
 void tampilkanSemuaRuangan()
 {
