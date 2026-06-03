@@ -3,7 +3,6 @@
 #include "graph.h"
 #include "crud.h"
 
-// GAME LOOP
 void mainkan()
 {
     int ruanganSaatIni = 0;
