@@ -74,7 +74,7 @@ void mainkan()
         }
         else if (input == "B" || input == "b")
         {
-            pop(); // keluarkan posisi saat ini (backtracking)
+            pop(); // backtracking
             if (isEmpty() == 1)
             {
                 cout << "Kamu sudah di ruangan awal!" << endl;
@@ -90,7 +90,7 @@ void mainkan()
         }
         else
         {
-            // Parse angka secara manual
+            // Parse angka manual
             int tujuan = -1;
             int valid  = 1;
             for (int i = 0; i < (int)input.size(); i++)
@@ -123,7 +123,7 @@ void mainkan()
     }
 }
 
-// MENU UTAMA
+// menu utama
 int main()
 {
     inisialisasiDungeon();

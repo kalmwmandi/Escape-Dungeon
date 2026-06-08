@@ -3,7 +3,6 @@
 
 #include "globals.h"
 
-// OPERASI GRAPH
 void buatGraph(int v)
 {
     jumlahRuangan = v;
@@ -74,13 +73,12 @@ void inisialisasiDungeon()
     itemRuangan[5] = 0; // kosong
     itemRuangan[6] = 3; // EXIT
 
-    // Hubungkan ruangan (graph tidak berarah)
+    // hubungkan ruangan (graph tidak berarah)
     tambahEdge(0, 1); // Pintu Masuk <-> Ruang Gelap
     tambahEdge(0, 2); // Pintu Masuk <-> Lorong Sempit
     tambahEdge(1, 3); // Ruang Gelap <-> Ruang Jebakan
-    tambahEdge(1, 4); // Ruang Gelap <-> Ruang Rahasia
     tambahEdge(2, 5); // Lorong Sempit <-> Ruang Penjaga
-    tambahEdge(4, 6); // Ruang Rahasia <-> Pintu Keluar
+    tambahEdge(5, 4); // Ruang Penjaga <-> Ruang Rahasia
     tambahEdge(5, 6); // Ruang Penjaga <-> Pintu Keluar
 }
 

@@ -4,7 +4,7 @@
 #include "globals.h"
 #include "graph.h"
 
-// CRUD RUANGAN (Create, Read, Update, Delete)
+
 
 void tampilkanSemuaRuangan()
 {
@@ -32,7 +32,7 @@ void tampilkanSemuaRuangan()
     }
 }
 
-// CREATE - Tambah ruangan baru
+// tambah ruangan baru
 void tambahRuangan()
 {
     if (jumlahRuangan >= MAX_RUANGAN)
@@ -85,7 +85,7 @@ void tambahRuangan()
     cout << "Ruangan berhasil ditambahkan dengan ID " << id << endl;
 }
 
-// UPDATE - Edit nama dan item ruangan
+// edit nama dan item ruangan
 void editRuangan()
 {
     tampilkanSemuaRuangan();
@@ -117,7 +117,7 @@ void editRuangan()
     cout << "Ruangan berhasil diupdate!" << endl;
 }
 
-// CREATE - Tambah koneksi baru antar ruangan
+// tambah koneksi baru antar ruangan
 void tambahKoneksiMenu()
 {
     tampilkanSemuaRuangan();
@@ -145,7 +145,7 @@ void tambahKoneksiMenu()
     }
 }
 
-// DELETE - Hapus koneksi antar ruangan
+// hapus koneksi antar ruangan
 void hapusEdgeMenu()
 {
     tampilkanSemuaRuangan();

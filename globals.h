@@ -7,7 +7,7 @@ using namespace std;
 const int MAX_RUANGAN = 10;
 const int kapasitas   = 20;
 
-// --- Graph ---
+//Graph 
 int jumlahRuangan;
 int adj[MAX_RUANGAN][MAX_RUANGAN];
 int visited[MAX_RUANGAN];
